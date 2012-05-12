@@ -14,4 +14,4 @@
           %li= link_to "Map", "#"
           %li= link_to "My Account", "#"
         %form.navbar-search.pull-left{:action => "/search"}
-          %input.search-query.span2{:type => "text", :placeHolder => "Search..."}
+          %input#city-search.search-query.span2{:type => "text", :placeHolder => "Search...", :data => {:provide => "typeahead"}}
