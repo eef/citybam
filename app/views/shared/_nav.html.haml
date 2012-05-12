@@ -9,3 +9,9 @@
       .container.nav-collapse
         %ul.nav
           %li= link_to "Home", root_url
+          %li= link_to "Cities", "#"
+          %li= link_to "Search", "#"
+          %li= link_to "Map", "#"
+          %li= link_to "My Account", "#"
+        %form.navbar-search.pull-left{:action => "/search"}
+          %input.search-query.span2{:type => "text", :placeHolder => "Search..."}
