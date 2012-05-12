@@ -5,7 +5,7 @@ class City < ActiveRecord::Base
 
     def search(query)
       response = []
-      select(["name", "id", "country"]).where(:active => true).where("name LIKE ?", query.concat("%")).each {|res| response << {:label => res.name, :country => res.country, :id => res.id} }
+      select(["name", "id", "country"]).where(:active => true).where("name LIKE ?", query.concat("%")).group(:country).each {|res| response << {:label => res.name, :country => res.country, :id => res.id} }
       response
     end
 
