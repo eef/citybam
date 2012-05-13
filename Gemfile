@@ -11,6 +11,7 @@ gem 'simple-navigation'
 gem 'carrierwave'
 gem 'faker'
 gem 'gmaps4rails'
+gem 'rmagick'
 gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 
 group :assets do
