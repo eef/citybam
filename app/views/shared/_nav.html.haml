@@ -5,13 +5,13 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand(href="#") Citybam
+      %a.brand(href="#")
+        citybam
       .container.nav-collapse
         %ul.nav
           %li= link_to "Home", root_url
           %li= link_to "Cities", "#"
           %li= link_to "Search", "#"
           %li= link_to "Map", "#"
-          %li= link_to "My Account", "#"
-        %form.navbar-search.pull-left{:action => "/search"}
-          %input#city-search.search-query.span2{:type => "text", :placeHolder => "Search...", :data => {:provide => "typeahead"}}
+          %li= link_to "My Account", "#"        
+        -# = render :partial => "shared/search"

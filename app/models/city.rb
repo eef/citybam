@@ -5,8 +5,16 @@ class City < ActiveRecord::Base
 
     def search(query)
       response = []
-      select(["name", "id", "country"]).where(:active => true).where("name LIKE ?", query.concat("%")).group(:country).each {|res| response << {:label => res.name, :country => res.country, :id => res.id} }
+      live(["name", "id", "country"]).where("name LIKE ?", query.concat("%")).group(:country).each {|res| response << {:label => res.name, :country => res.country, :id => res.id} }
       response
+    end
+
+    def live(fields=[])
+      if fields.blank?
+         where(:active => true)
+      else
+        select(fields).where(:active => true)
+      end
     end
 
   end

@@ -4,6 +4,21 @@ body { padding-top: 60px; }
 @import "twitter/bootstrap/responsive";
 @baseFontFamily: "elephant";
 
+@font-face {
+    font-family: "Righteous";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Righteous"), local("Righteous-Regular"), url("righteous.woff") format("woff");
+}
+
+.brand {
+  font-family: 'Righteous', sans-serif;
+}
+
+h1 {
+  font-family: 'Righteous', sans-serif;
+}
+
 // Set the correct sprite paths
 @iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
 @iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');

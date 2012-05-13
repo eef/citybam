@@ -19,4 +19,5 @@ $(function() {
   $( "#city-search" ).catcomplete({
     source: "/cities/search"
   });
+
 });

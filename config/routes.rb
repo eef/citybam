@@ -1,5 +1,7 @@
 Citybam::Application.routes.draw do
 
+  resources :venues
+
   resources :home, :only => [:index]
 
   resources :cities do

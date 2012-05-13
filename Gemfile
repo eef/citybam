@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'simple-navigation'
+gem 'carrierwave'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
