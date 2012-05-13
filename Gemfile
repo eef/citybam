@@ -9,6 +9,8 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'simple-navigation'
 gem 'carrierwave'
+gem 'faker'
+gem 'gmaps4rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

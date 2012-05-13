@@ -1,5 +1,6 @@
+class Attachment < ActiveRecord::Base
   belongs_to :attachable, :polymorphic => true
-  attr_accessible :description, :file, :title, :topo
+  attr_accessible :description, :file, :title
   mount_uploader :file, FileUploader
 
   validates :file,
@@ -16,4 +17,4 @@
       self.height = geometry[1]
     end
   end
-
+end

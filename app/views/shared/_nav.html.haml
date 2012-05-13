@@ -9,9 +9,6 @@
         citybam
       .container.nav-collapse
         %ul.nav
-          %li= link_to "Home", root_url
-          %li= link_to "Cities", "#"
-          %li= link_to "Search", "#"
-          %li= link_to "Map", "#"
-          %li= link_to "My Account", "#"        
+          %li= link_to "home", root_url
+          %li= link_to raw("bam<span style='color: lime;'>me</span>"), "#"        
         -# = render :partial => "shared/search"

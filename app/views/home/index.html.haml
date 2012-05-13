@@ -1,4 +1,20 @@
 .row
-  .span12{:style => "text-align: center;"}
-    %h1.well
-      citybam
+  .span12.well
+    .page-header
+      %h1
+        LONDON
+    %p
+      = Faker::Lorem.paragraphs.join
+    %p
+      = Faker::Lorem.paragraphs.join
+.row
+  .span2
+    %ul.nav.nav-tabs.nav-stacked
+      %li.active
+        = link_to "Food", "#"
+      %li
+        = link_to "Music", "#"
+      %li
+        = link_to "Theatre", "#"
+  .span9
+    = gmaps4rails(@city.to_json)

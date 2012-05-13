@@ -1,5 +1,6 @@
 class City < ActiveRecord::Base
-  attr_accessible :area_code, :country, :lat, :lng, :metro_code, :name, :postal_code, :region
+  acts_as_gmappable
+  attr_accessible :area_code, :country, :latitude, :longitude, :metro_code, :name, :postal_code, :region
 
   class << self
 
@@ -17,6 +18,10 @@ class City < ActiveRecord::Base
       end
     end
 
+  end
+
+  def gmaps4rails_address
+    "#{self.name}, #{self.country}"
   end
 
 end
