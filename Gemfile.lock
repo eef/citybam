@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ryanb/nested_form.git
+  revision: 63dcbcc6c6dbe07b3761ae8cc0cd04cc2a45024a
+  specs:
+    nested_form (0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -142,6 +148,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   mysql2
+  nested_form!
   rails (= 3.2.3)
   sass-rails (~> 3.2.3)
   simple-navigation
