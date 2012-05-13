@@ -12,14 +12,14 @@ class City < ActiveRecord::Base
 
     def live(fields=[])
       if fields.blank?
-         where(:active => true)
+         where(:active => true).order("name ASC")
       else
-        select(fields).where(:active => true)
+        select(fields).where(:active => true).order("name ASC")
       end
     end
 
-    def gmaps(fields=[])
-      where(:active => true, :gmaps => true)
+    def gmaps(city)
+      where(:active => true, :gmaps => true).where(:name => city)
     end
 
   end

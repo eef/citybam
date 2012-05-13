@@ -1,20 +1,10 @@
 .row
-  .span12.well
-    .page-header
+  .span12
+    .hero-unit{:style => "text-align: center"}
       %h1
-        LONDON
-    %p
-      = Faker::Lorem.paragraphs.join
-    %p
-      = Faker::Lorem.paragraphs.join
-.row
-  .span2
-    %ul.nav.nav-tabs.nav-stacked
-      %li.active
-        = link_to "Food", "#"
-      %li
-        = link_to "Music", "#"
-      %li
-        = link_to "Theatre", "#"
-  .span9
-    = gmaps4rails(@city)
+        citybam
+      %hr
+      %p
+        - City.live.each do |city|
+          %br
+          = link_to city.name, city_path(city.name.downcase)

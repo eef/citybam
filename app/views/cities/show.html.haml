@@ -1,0 +1,19 @@
+.row
+  .span12.well
+    .span3
+      .page-header.city-name
+        %h1
+          = params[:id].upcase
+      %ul.nav.nav-tabs.nav-stacked
+        %li.active
+          = link_to "Food", "#"
+        %li
+          = link_to "Music", "#"
+        %li
+          = link_to "Theatre", "#"
+        %li
+          = link_to "Leisure", "#"
+        %li
+          = link_to "Sports & Fitness", "#"
+    .span3
+      = gmaps({"map_options" => {"auto_zoom" => false, "zoom" => 12}, "markers" => {"data" => @city}})

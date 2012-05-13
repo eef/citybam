@@ -1,0 +1,22 @@
+.row
+  .span12.well
+    .span6
+      .page-header.city-name
+        %h1
+          = params[:city].upcase
+      %p
+        = Faker::Lorem.paragraphs.join
+      %p
+        = Faker::Lorem.paragraphs.join
+    .span3
+      = gmaps({"map_options" => {"auto_zoom" => false, "zoom" => 12}, "markers" => {"data" => @city}})
+.row
+  .span2
+    %ul.nav.nav-tabs.nav-stacked
+      %li.active
+        = link_to "Food", "#"
+      %li
+        = link_to "Music", "#"
+      %li
+        = link_to "Theatre", "#"
+
