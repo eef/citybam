@@ -18,10 +18,14 @@ class City < ActiveRecord::Base
       end
     end
 
+    def gmaps(fields=[])
+      where(:active => true, :gmaps => true)
+    end
+
   end
 
   def gmaps4rails_address
-    "#{self.name}, #{self.country}"
+    name
   end
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513005720) do
+ActiveRecord::Schema.define(:version => 20120513025807) do
 
   create_table "attachments", :force => true do |t|
     t.text     "description"
@@ -30,13 +30,14 @@ ActiveRecord::Schema.define(:version => 20120513005720) do
     t.string   "region"
     t.string   "name"
     t.string   "postal_code"
-    t.float    "lat"
-    t.float    "lng"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "metro_code"
     t.integer  "area_code"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.boolean  "active"
+    t.boolean  "gmaps"
   end
 
   create_table "contacts", :force => true do |t|
