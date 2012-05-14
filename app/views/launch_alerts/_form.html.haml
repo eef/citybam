@@ -1,13 +1,5 @@
 = form_for @launch_alert do |f|
-  -if @launch_alert.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@launch_alert.errors.count, "error")} prohibited this launch_alert from being saved:"
-      %ul
-        - @launch_alert.errors.full_messages.each do |msg|
-          %li= msg
-
   .field
-    = f.label :email
-    = f.text_field :email
+    = f.email_field :email, :class => "span4", :placeHolder => "email me when you go live...", :style => "text-align: center;"
   .actions
-    = f.submit 'Save'
+    = f.submit 'Tell me!', :class => "btn btn-success"
