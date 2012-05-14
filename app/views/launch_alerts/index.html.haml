@@ -1,0 +1,19 @@
+%h1 Listing launch_alerts
+
+%table
+  %tr
+    %th Email
+    %th
+    %th
+    %th
+
+  - @launch_alerts.each do |launch_alert|
+    %tr
+      %td= launch_alert.email
+      %td= link_to 'Show', launch_alert
+      %td= link_to 'Edit', edit_launch_alert_path(launch_alert)
+      %td= link_to 'Destroy', launch_alert, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Launch alert', new_launch_alert_path

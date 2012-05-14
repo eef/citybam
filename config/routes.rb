@@ -1,5 +1,7 @@
 Citybam::Application.routes.draw do
 
+  resources :launch_alerts
+
   resources :venues
 
   resources :home, :only => [:index]

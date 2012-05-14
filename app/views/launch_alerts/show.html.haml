@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Email:
+  = @launch_alert.email
+
+= link_to 'Edit', edit_launch_alert_path(@launch_alert)
+\|
+= link_to 'Back', launch_alerts_path

@@ -1,0 +1,3 @@
+class LaunchAlert < ActiveRecord::Base
+  attr_accessible :email
+end
