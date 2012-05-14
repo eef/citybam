@@ -22,7 +22,7 @@ namespace :db do
     Symlink database configuration file
   DESC
   task :symlink, :except => { :no_release => true } do
-    run "ln -nfs #{release_path}/config/database.yml #{shared_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 end
 
