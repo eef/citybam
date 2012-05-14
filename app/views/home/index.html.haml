@@ -6,10 +6,10 @@
           ×
         = flash[:notice]
     .hero-unit{:style => "text-align: center"}
-      = content_tag :h1 do |t|
+      = content_tag :h1, :style => "color: #555;" do |t|
         == city#{content_tag :span, "bam", :style => "color: #5BB75B;"}
       %hr
-        %h3{:style => "color: #"}
+        %h3{:style => "color: #555;"}
           your live city guide
         %br
       = render :partial => "launch_alerts/form"
