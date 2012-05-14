@@ -18,6 +18,9 @@ set :keep_releases, 2
 
 
 namespace :db do
+  desc <<-DESC
+    Symlink database configuration file
+  DESC
   task :symlink, :except => { :no_release => true } do
     run "ln -nfs /home/citybam.com/shared/config/database.yml #{release_path}/config/database.yml"
   end
@@ -28,10 +31,15 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
+  desc <<-DESC
+    Install bundle in deployment mode
+  DESC
   task :bundle_deploy do
     run "bundle install --deployment"
   end
 end
+
+after "deploy:update", "deploy:bundle_deploy", "deploy:db:symlink"
 
 
 # if you want to clean up old releases on each deploy uncomment this:
