@@ -39,6 +39,8 @@ module Citybam
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+    config.gmaps_api_key = "AIzaSyB7uHN2e7YLqgo_Gxh24ONCHOPV9eGtdYI"
+
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types

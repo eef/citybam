@@ -16,4 +16,5 @@
         %li
           = link_to "Sports & Fitness", "#"
     .span3
+      = @city
       = gmaps({"map_options" => {"auto_zoom" => false, "zoom" => 12}, "markers" => {"data" => @city}})
