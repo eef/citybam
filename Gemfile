@@ -14,6 +14,7 @@ gem 'gmaps4rails'
 gem 'rmagick'
 gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 gem 'capistrano'
+gem 'valid_email'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

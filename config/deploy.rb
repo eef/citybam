@@ -29,6 +29,7 @@ end
 namespace :deploy do
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
+    run "/opt/nginx/sbin/nginx -s stop; /opt/nginx/sbin/nginx"
   end
 
   task :bundle do

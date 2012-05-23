@@ -7,7 +7,8 @@ class LaunchAlertsController < ApplicationController
         format.html { redirect_to root_path, notice: 'Thank you!  We will email you when we launch!' }
         format.json { render json: @launch_alert, status: :created, location: @launch_alert }
       else
-        format.html { render action: "new" }
+        flash[:error] = true
+        format.html { redirect_to root_path, notice: 'Please enter a valid email address.'  }
         format.json { render json: @launch_alert.errors, status: :unprocessable_entity }
       end
     end
